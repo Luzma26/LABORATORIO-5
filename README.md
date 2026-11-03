@@ -1,4 +1,4 @@
-# SIMULACION Y MONITOREO DE VARIABLES CARDIOVASCULARES Y HEMODINAMICAS
+# SIMULACIÓN Y MONITOREO DE VARIABLES CARDIOVASCULARES Y HEMODINÁMICAS
 
 **Luz Marina Valderrama Botia – 5600741**
 
@@ -22,7 +22,7 @@ Operar con el simulador Pronk OxSim (OX-1) y el monitor de signos vitales uMEC 1
 - Verificar los límites de medición de un monitor de signos vitales mediante simulación de variables hemodinámicas.
 - Interpretar variaciones en los parámetros hemodinámicos asociadas a estados fisiológicos y patológicos.
 
-## MARCO TEORICO
+## MARCO TEÓRICO
 
 ### Monitor de signos vitales uMEC 100
 
@@ -102,7 +102,7 @@ Durante la práctica se tuvieron en cuenta las recomendaciones de seguridad esta
 
 Estas recomendaciones hacen parte de las condiciones de seguridad indicadas para la práctica de laboratorio [1].
 
-## METODOLOGIA
+## METODOLOGÍA
 
 Inicialmente se encendió el monitor uMEC 100 y se verificó su funcionamiento en modo monitor. Posteriormente se conectó el sensor de pulsioximetría al simulador Pronk OxSim OX-1.
 
@@ -421,15 +421,13 @@ La frecuencia cardíaca se relaciona con la separación temporal entre los picos
 Por otra parte, la SpO₂ se determina mediante la comparación de la absorción de luz roja e infrarroja, considerando los cambios pulsátiles asociados al paso de la sangre arterial. Por lo tanto, aunque la onda fotopletismográfica permite observar la actividad pulsátil, la saturación no se obtiene únicamente a partir de su frecuencia o amplitud.
 
 Durante la prueba de baja perfusión, la amplitud de la componente pulsátil puede disminuir debido a la menor variación del volumen sanguíneo detectada por el sensor. Esto puede dificultar la identificación de los pulsos y afectar la estabilidad de la medición. En conjunto, la observación de la onda permite complementar los valores numéricos de frecuencia cardíaca y SpO₂, facilitando la interpretación del comportamiento del sistema ante las diferentes condiciones simuladas.
-## CONCLUSION
-La práctica permitió evaluar el funcionamiento del sistema de monitorización compuesto por el simulador Pronk OxSim OX-1 y el monitor Mindray uMEC 100 mediante diferentes condiciones de SpO₂, frecuencia cardíaca y perfusión. Después del cambio del equipo inicialmente utilizado, se obtuvo una correspondencia adecuada entre los valores de referencia y los registrados por el monitor, con un error absoluto promedio de 0,25 puntos porcentuales para SpO₂ y de 0 bpm para la frecuencia cardíaca. Además, se comprobó la activación de las alarmas ante condiciones de saturación baja, saturación superior al límite configurado y frecuencia cardíaca elevada, con un tiempo aproximado de respuesta de 12 segundos. Estos resultados evidencian un comportamiento satisfactorio del monitor en las condiciones evaluadas; sin embargo, la confiabilidad observada está limitada a las pruebas realizadas con el simulador y no representa por sí sola una validación clínica del equipo. Asimismo, el OxSim permite reproducir condiciones ópticas y pulsátiles controladas, pero no reproduce completamente la complejidad fisiológica de un paciente ni todas las alteraciones asociadas a condiciones patológicas reales. Como siguiente paso, sería conveniente ampliar las pruebas con diferentes niveles de perfusión y condiciones de señal, así como realizar verificaciones adicionales con equipos de referencia para evaluar con mayor profundidad la exactitud y las limitaciones del sistema.
 ## PREGUNTAS PARA LA DISCUSIÓN
 ### ¿Cuál es el principio de operación del Pronk OxSim OX-1 para simular una onda pulsátil?
 El Pronk OxSim OX-1 funciona mediante un principio de simulación óptica. El dispositivo se acopla al sensor de pulsioximetría y genera una señal luminosa pulsátil que reproduce el comportamiento óptico que el sensor detectaría al estar colocado sobre un tejido con circulación sanguínea. Mediante la selección de diferentes modos, el simulador reproduce condiciones específicas de saturación de oxígeno, frecuencia cardíaca y perfusión. De esta manera, el monitor recibe una señal óptica controlada y puede procesarla para mostrar los valores correspondientes de SpO₂ y frecuencia de pulso, sin necesidad de utilizar un paciente real. Esto permite comprobar el funcionamiento del sistema de medición y de sus alarmas bajo condiciones reproducibles.
 ### ¿Por qué la SpO₂ baja puede ser un falso positivo (falsa alarma) en una situación de mala perfusión?
 La SpO₂ baja puede generar una falsa alarma durante una situación de mala perfusión porque el pulsioxímetro depende de detectar las variaciones pulsátiles del volumen sanguíneo en el tejido donde se encuentra ubicado el sensor. Cuando la perfusión disminuye, la componente pulsátil de la señal fotopletismográfica se vuelve más débil y puede confundirse con ruido, movimiento u otras interferencias. Como consecuencia, el monitor puede tener dificultades para identificar correctamente los pulsos y calcular la saturación de oxígeno, mostrando valores inferiores a los reales o lecturas inestables. Por esta razón, una alarma de SpO₂ baja no siempre significa que exista una disminución real de oxígeno en la sangre; también puede estar relacionada con una señal de mala calidad o con una perfusión insuficiente en el sitio de medición. En el contexto de la práctica, el modo Low Perfusion permitió observar cómo una condición de baja perfusión puede afectar la adquisición de la señal y la interpretación de la medición.
-
-
+## CONCLUSIÓN
+La práctica permitió evaluar el funcionamiento del sistema de monitorización compuesto por el simulador Pronk OxSim OX-1 y el monitor Mindray uMEC 100 mediante diferentes condiciones de SpO₂, frecuencia cardíaca y perfusión. Después del cambio del equipo inicialmente utilizado, se obtuvo una correspondencia adecuada entre los valores de referencia y los registrados por el monitor, con un error absoluto promedio de 0,25 puntos porcentuales para SpO₂ y de 0 bpm para la frecuencia cardíaca. Además, se comprobó la activación de las alarmas ante condiciones de saturación baja, saturación superior al límite configurado y frecuencia cardíaca elevada, con un tiempo aproximado de respuesta de 12 segundos. Estos resultados evidencian un comportamiento satisfactorio del monitor en las condiciones evaluadas; sin embargo, la confiabilidad observada está limitada a las pruebas realizadas con el simulador y no representa por sí sola una validación clínica del equipo. Asimismo, el OxSim permite reproducir condiciones ópticas y pulsátiles controladas, pero no reproduce completamente la complejidad fisiológica de un paciente ni todas las alteraciones asociadas a condiciones patológicas reales. Como siguiente paso, sería conveniente ampliar las pruebas con diferentes niveles de perfusión y condiciones de señal, así como realizar verificaciones adicionales con equipos de referencia para evaluar con mayor profundidad la exactitud y las limitaciones del sistema.
 
 ## REFERENCIAS
 
