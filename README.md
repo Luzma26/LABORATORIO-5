@@ -280,7 +280,7 @@ Fig.7. Modo de 98 % de SpO₂ y 140 bpm
 | 98 % / 80 bpm | 98 % | 80 bpm | 98 % | 80 bpm | 0 % | 0 % |
 | 98 % / 140 bpm | 98 % | 140 bpm | 98 % | 140 bpm | 0 % | 0 % |
 
-La primera prueba se presenta separadamente porque correspondió a una verificación inicial del equipo que posteriormente fue cambiado. Al no conocerse con certeza el modo exacto seleccionado en el OxSim durante esa primera comprobación, no se asignan valores simulados ni se calcula un error formal para dicha prueba.
+La primera prueba se presenta separadamente porque correspondió a una verificación inicial del equipo que posteriormente fue cambiado.
 
 Después del cambio de equipo, las pruebas realizadas en el orden establecido por la guía presentaron resultados adecuados, con coincidencia exacta en la mayoría de las condiciones y una diferencia de 1 punto porcentual en la SpO₂ de la prueba de 95 %/40 bpm.
 
