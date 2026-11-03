@@ -80,6 +80,14 @@ Para el montaje se utilizaron los siguientes elementos:
 - Computador con conexión a Internet para la consulta bibliográfica.
 - Libreta y elementos de escritura.
 
+  <img width="630" height="488" alt="image" src="https://github.com/user-attachments/assets/ea29491a-3476-4b29-ab8b-5a32bb2f6eac" />
+
+Fig.1. Mindray uMEC 10
+
+<img width="522" height="567" alt="image" src="https://github.com/user-attachments/assets/077f5cb4-27c9-4b48-bee0-01c74740ffd3" />
+
+Fig.2. OxSim OX-1
+
 La guía establece como equipos principales el monitor uMEC 100 con sensor de SpO₂ y el simulador Pronk OxSim OX-1 [1].
 
 ### Consideraciones de seguridad eléctrica
@@ -139,6 +147,10 @@ E%= (|40-80|) / 40 X 100= 100%
 ### Interpretación
 El primer equipo utilizado no permitió obtener inicialmente una correspondencia adecuada de los valores. Por esta razón se decidió reemplazarlo y repetir el procedimiento. Este resultado se reporta como parte de la práctica debido a que representa una condición real observada durante la verificación inicial del sistema.
 
+<img width="631" height="455" alt="image" src="https://github.com/user-attachments/assets/9219d5a3-f6f4-4c16-92e7-f4568a4d9b2d" />
+
+Fig.3. Prueba de 95 % de SpO₂ y 40 bpm erronea
+
 ## Verificación del modo 85 % de SpO₂ y 80 bpm
 Después del cambio de equipo se inició la secuencia de pruebas establecida por la guía. La primera condición correspondió a:
 - SpO₂ simulada = 85 %
@@ -163,6 +175,10 @@ E%= (|80-80|) / 80 X 100= 0%
 Resultado: error absoluto = 0 bpm; error porcentual = 0 %.
 ### Interpretación
 Para esta condición se obtuvo una correspondencia exacta entre el valor configurado en el simulador y el valor mostrado por el monitor. Por tanto, el sistema respondió correctamente para esta prueba.
+
+<img width="636" height="517" alt="image" src="https://github.com/user-attachments/assets/a6147749-d310-484f-8991-096e199b5a1a" />
+
+Fig.4. Modo 85 % de SpO₂ y 80 bpm
 
 ## Prueba de 95 % de SpO₂ y 40 bpm
 La segunda condición de la secuencia correspondió al modo del OxSim que simula:
@@ -191,6 +207,10 @@ La frecuencia cardíaca fue detectada correctamente por el monitor. La diferenci
 
 Es importante diferenciar esta prueba de la primera prueba de verificación realizada antes del cambio de equipo. La primera prueba presentó una lectura incorrecta y motivó el cambio del equipo; posteriormente, la secuencia de la guía se inició nuevamente y esta condición de 95 %/40 bpm se obtuvo correctamente.
 
+<img width="620" height="482" alt="image" src="https://github.com/user-attachments/assets/a10b76c3-1942-444e-a5e1-e627e7a9acb9" />
+
+Fig.5. Modo 95 % de SpO₂ y 40 bpm
+
 ## Prueba de 98 % de SpO₂ y 80 bpm
 Para la tercera condición se seleccionó el modo del OxSim correspondiente a:
 - SpO₂ = 98 %
@@ -215,6 +235,10 @@ E%= (|80-80|) / 80 X 100= 0%
 Resultado: error absoluto = 0 bpm; error porcentual = 0 %.
 ### Interpretación
 Los valores registrados coincidieron exactamente con los programados en el OxSim, por lo que el monitor presentó un comportamiento correcto para esta condición.
+
+<img width="635" height="487" alt="image" src="https://github.com/user-attachments/assets/13bfa810-e1b6-4f81-8b1a-ddafceda8b6a" />
+
+Fig.6. Modo 98 % de SpO₂ y 80 bpm
 
 ## Prueba de 98 % de SpO₂ y 140 bpm
 Finalmente se utilizó el modo del OxSim correspondiente a una frecuencia cardíaca elevada:
@@ -241,6 +265,11 @@ Resultado: error absoluto = 0 bpm; error porcentual = 0 %.
 ### Interpretación
 El monitor reprodujo correctamente tanto la frecuencia cardíaca elevada como la saturación configurada en el simulador. Esta prueba permitió verificar además el comportamiento del monitor frente a una frecuencia cardíaca que supera el límite de alarma configurado.
 
+<img width="592" height="402" alt="image" src="https://github.com/user-attachments/assets/97312749-3142-441f-9f9d-8d927ef0cf0f" />
+
+Fig.7. Modo de 98 % de SpO₂ y 140 bpm
+
+
 ### Resumen de resultados de medicion
 
 | Prueba | SpO₂ simulada | FC simulada | SpO₂ medida | FC medida | Error SpO₂ | Error FC |
@@ -263,6 +292,10 @@ En el menú de ajuste de alarmas se establecieron los límites correspondientes 
 La guía establece específicamente la modificación de los límites de SpO₂ para realizar las pruebas de alarma, incluyendo un límite inferior de 90 % y posteriormente un límite superior de 97 % [1].
 
 Durante la configuración también se observaron límites relacionados con la frecuencia cardíaca, incluyendo valores de alarma para frecuencia alta y baja.
+
+<img width="640" height="490" alt="image" src="https://github.com/user-attachments/assets/f0ecad51-5c75-474d-8b4a-10a673efe91f" />
+
+Fig.8. Menú de configuración para las alarmas
 
 La configuración observada fue:
 
@@ -313,6 +346,11 @@ Ea=|80-80|= 0 bpm
 E%= (|80-80|) / 80 X 100= 0%
 
 Resultado: la medición coincidió con el valor simulado y la alarma se activó después de aproximadamente 12 s.
+
+<img width="618" height="481" alt="image" src="https://github.com/user-attachments/assets/e9782953-8ab2-4758-8102-cecf9937e6a3" />
+
+
+Fig.9. Prueba de alarma con la condición de 85 % de SpO₂ y 80 bpm.
 
 ## PRUEBA DE ALARMA POR SpO₂ ALTA Y BAJA PERFUSIÓN
 Posteriormente se configuró el límite superior de SpO₂ en 97 %. Se seleccionó en el OxSim el modo Low Perfusion, que simula aproximadamente:
