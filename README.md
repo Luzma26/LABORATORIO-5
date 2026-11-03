@@ -360,39 +360,47 @@ La diferencia de 20 bpm indicada en la tabla corresponde únicamente a la difere
 La alarma se activó aproximadamente 12 segundos después de establecerse la condición.
 
 ## ANÁLISIS DE RESULTADOS
-Los resultados obtenidos permitieron comprobar el funcionamiento del sistema compuesto por el simulador Pronk OxSim OX-1 y el monitor Mindray uMEC 100.
+### Análisis estadístico de las diferencias entre los valores de referencia y los valores medidos
+Para evaluar el comportamiento del sistema de monitorización se compararon los valores de referencia establecidos en el simulador Pronk OxSim OX-1 con los valores registrados por el monitor Mindray uMEC 100. Se tuvieron en cuenta las cuatro pruebas realizadas después del cambio de equipo: 85 %/80 bpm, 95 %/40 bpm, 98 %/80 bpm y 98 %/140 bpm.
 
-La primera prueba realizada con el equipo inicial no presentó el comportamiento esperado, ya que se obtuvo una lectura de 94 % de SpO₂ y 80 bpm durante la verificación inicial. Debido a esta discrepancia se tomó la decisión de cambiar el equipo y repetir el procedimiento. Esta situación es importante porque demuestra la necesidad de realizar una comprobación inicial de los equipos antes de comenzar la adquisición formal de datos.
+En la variable SpO₂ se obtuvieron errores absolutos de 0, 1, 0 y 0 puntos porcentuales, respectivamente. El error absoluto promedio fue:
 
-Después del cambio, las pruebas se realizaron nuevamente siguiendo el orden indicado en la guía. En la prueba de 85 % de SpO₂ y 80 bpm se obtuvo una correspondencia exacta entre el simulador y el monitor. En la condición de 95 % de SpO₂ y 40 bpm se obtuvo una lectura de 96 % y 40 bpm, respectivamente, lo cual representa un error porcentual de aproximadamente 1,05 % para SpO₂ y 0 % para la frecuencia cardíaca.
+Ea= (0+1+0+0) /4= 0.25
 
-En las pruebas de 98 %/80 bpm y 98 %/140 bpm se obtuvo una correspondencia exacta entre los valores simulados y medidos. Esto indica un comportamiento adecuado del sistema en las condiciones evaluadas.
+Por tanto, la diferencia absoluta promedio de SpO₂ fue de 0,25 puntos porcentuales. El único valor diferente se presentó en la prueba de 95 % de SpO₂ y 40 bpm, en la cual el monitor registró 96 %, equivalente a un error porcentual aproximado de 1,05 %.
 
-La prueba de 40 bpm es particularmente relevante debido a que las frecuencias cardíacas bajas pueden representar una condición más exigente para determinados sistemas de pulsioximetría [2]. Sin embargo, en el procedimiento realizado después del cambio de equipo, el monitor logró detectar correctamente los 40 bpm.
+Para la frecuencia cardíaca, las cuatro pruebas presentaron coincidencia entre los valores simulados y medidos. Los errores absolutos fueron 0, 0, 0 y 0 bpm, por lo que el error absoluto promedio fue:
 
-También se verificó el funcionamiento de las alarmas. Las condiciones de SpO₂ baja, SpO₂ alta y frecuencia cardíaca elevada generaron la alarma correspondiente. El tiempo observado entre el establecimiento de la condición de alarma y la activación sonora fue de aproximadamente 12 segundos.
+Ea= (0+0+0+0) /4= 0 bpm
 
-La observación de la onda fotopletismográfica permitió complementar la interpretación de los resultados numéricos, ya que esta señal representa la variación pulsátil detectada ópticamente por el sensor de SpO₂. En condiciones de baja perfusión, la amplitud y estabilidad de la señal pueden verse afectadas, por lo que esta prueba permite evaluar no solamente el valor numérico presentado por el monitor sino también el comportamiento de la señal adquirida.
+Estos resultados muestran que, después del cambio de equipo, el monitor presentó una correspondencia adecuada con los valores de referencia del simulador. La primera verificación realizada con el equipo inicial no se incluyó en el cálculo estadístico porque no se registró con certeza el modo exacto seleccionado en el OxSim.
 
-En general, los resultados obtenidos después del cambio de equipo fueron consistentes con las condiciones programadas en el simulador y permitieron comprobar el funcionamiento del sistema de medición y alarmas.
-## 14. CONCLUSIÓN
+### Relación entre la forma de onda visualizada y la frecuencia cardíaca y la saturación periférica de oxígeno
+La onda fotopletismográfica observada en el monitor representa las variaciones del volumen sanguíneo en los tejidos periféricos, detectadas mediante la absorción de luz por parte de la sangre. Esta señal permite relacionar la actividad pulsátil con la frecuencia cardíaca y aporta información utilizada por el pulsioxímetro para estimar la saturación periférica de oxígeno.
 
-La construcción y evaluación del prototipo de incubadora neonatal permitió reconocer la importancia de controlar las condiciones ambientales para favorecer la estabilidad térmica del neonato e identificar los componentes principales que intervienen en el funcionamiento de estos equipos. La integración del Arduino Uno, el sensor DHT11, el FSR400, la pantalla OLED, los indicadores luminosos y los ventiladores permitió desarrollar un sistema que respondió según lo programado durante las pruebas. La pantalla mostró la información prevista e indicó cuándo el ventilador debía encenderse o apagarse, mientras que los indicadores luminosos y los ventiladores funcionaron correctamente. En la estimación del peso, el FSR400 presentó un error aproximado del 9 %, por lo que el valor obtenido fue relativamente cercano al peso patrón, aunque todavía puede mejorarse mediante una calibración más precisa. En cuanto al comportamiento térmico, se observó que la incubadora tardaba en calentarse y que el bombillo no estaba regulado automáticamente por el Arduino, lo que limitó la capacidad del sistema para mantener la temperatura de manera precisa. Estos resultados muestran que es posible representar funciones básicas de una incubadora mediante componentes electrónicos de bajo costo, pero que la regulación térmica y la medición del peso requieren mejoras para obtener resultados más exactos y confiables. Como siguiente paso, se propone incorporar un sistema de control automático del calentamiento, mejorar el aislamiento térmico, realizar mediciones repetidas de temperatura y peso y evaluar el desempeño del prototipo mediante pruebas cuantitativas. El sistema desarrollado constituye una herramienta académica para comprender los principios de instrumentación biomédica, pero no debe utilizarse como sustituto de una incubadora clínica.
+La frecuencia cardíaca se relaciona con la separación temporal entre los picos consecutivos de la onda. Cuando aumenta la frecuencia cardíaca, los pulsos aparecen más próximos entre sí; cuando disminuye, aumenta el intervalo entre los picos. Por esta razón, las condiciones simuladas de 40, 80 y 140 bpm producen diferentes frecuencias de repetición de la señal fotopletismográfica.
 
-## 15. PREGUNTAS PARA LA DISCUSIÓN
+Por otra parte, la SpO₂ se determina mediante la comparación de la absorción de luz roja e infrarroja, considerando los cambios pulsátiles asociados al paso de la sangre arterial. Por lo tanto, aunque la onda fotopletismográfica permite observar la actividad pulsátil, la saturación no se obtiene únicamente a partir de su frecuencia o amplitud.
 
-### Pregunta 1. ¿Qué otras variables, y por qué, además de las mencionadas son críticas en el monitoreo neonatal?
-
-
-
-### Pregunta 2. ¿Qué haría falta para convertir el sistema desarrollado en una incubadora neonatal real?
-
-
-
-### Pregunta 3. ¿Qué semejanzas hay entre una incubadora neonatal y una servocuna?
+Durante la prueba de baja perfusión, la amplitud de la componente pulsátil puede disminuir debido a la menor variación del volumen sanguíneo detectada por el sensor. Esto puede dificultar la identificación de los pulsos y afectar la estabilidad de la medición. En conjunto, la observación de la onda permite complementar los valores numéricos de frecuencia cardíaca y SpO₂, facilitando la interpretación del comportamiento del sistema ante las diferentes condiciones simuladas.
+## CONCLUSION
+La práctica permitió evaluar el funcionamiento del sistema de monitorización compuesto por el simulador Pronk OxSim OX-1 y el monitor Mindray uMEC 100 mediante diferentes condiciones de SpO₂, frecuencia cardíaca y perfusión. Después del cambio del equipo inicialmente utilizado, se obtuvo una correspondencia adecuada entre los valores de referencia y los registrados por el monitor, con un error absoluto promedio de 0,25 puntos porcentuales para SpO₂ y de 0 bpm para la frecuencia cardíaca. Además, se comprobó la activación de las alarmas ante condiciones de saturación baja, saturación superior al límite configurado y frecuencia cardíaca elevada, con un tiempo aproximado de respuesta de 12 segundos. Estos resultados evidencian un comportamiento satisfactorio del monitor en las condiciones evaluadas; sin embargo, la confiabilidad observada está limitada a las pruebas realizadas con el simulador y no representa por sí sola una validación clínica del equipo. Asimismo, el OxSim permite reproducir condiciones ópticas y pulsátiles controladas, pero no reproduce completamente la complejidad fisiológica de un paciente ni todas las alteraciones asociadas a condiciones patológicas reales. Como siguiente paso, sería conveniente ampliar las pruebas con diferentes niveles de perfusión y condiciones de señal, así como realizar verificaciones adicionales con equipos de referencia para evaluar con mayor profundidad la exactitud y las limitaciones del sistema.
+## PREGUNTAS PARA LA DISCUSIÓN
+### ¿Cuál es el principio de operación del Pronk OxSim OX-1 para simular una onda pulsátil?
+El Pronk OxSim OX-1 funciona mediante un principio de simulación óptica. El dispositivo se acopla al sensor de pulsioximetría y genera una señal luminosa pulsátil que reproduce el comportamiento óptico que el sensor detectaría al estar colocado sobre un tejido con circulación sanguínea. Mediante la selección de diferentes modos, el simulador reproduce condiciones específicas de saturación de oxígeno, frecuencia cardíaca y perfusión. De esta manera, el monitor recibe una señal óptica controlada y puede procesarla para mostrar los valores correspondientes de SpO₂ y frecuencia de pulso, sin necesidad de utilizar un paciente real. Esto permite comprobar el funcionamiento del sistema de medición y de sus alarmas bajo condiciones reproducibles.
+### ¿Por qué la SpO₂ baja puede ser un falso positivo (falsa alarma) en una situación de mala perfusión?
+La SpO₂ baja puede generar una falsa alarma durante una situación de mala perfusión porque el pulsioxímetro depende de detectar las variaciones pulsátiles del volumen sanguíneo en el tejido donde se encuentra ubicado el sensor. Cuando la perfusión disminuye, la componente pulsátil de la señal fotopletismográfica se vuelve más débil y puede confundirse con ruido, movimiento u otras interferencias. Como consecuencia, el monitor puede tener dificultades para identificar correctamente los pulsos y calcular la saturación de oxígeno, mostrando valores inferiores a los reales o lecturas inestables. Por esta razón, una alarma de SpO₂ baja no siempre significa que exista una disminución real de oxígeno en la sangre; también puede estar relacionada con una señal de mala calidad o con una perfusión insuficiente en el sitio de medición. En el contexto de la práctica, el modo Low Perfusion permitió observar cómo una condición de baja perfusión puede afectar la adquisición de la señal y la interpretación de la medición.
 
 
 
 ## REFERENCIAS
 
-[1] Universidad Militar Nueva Granada, “Diseño y construcción de una incubadora neonatal a escala,” *Guía de laboratorio de Instrumentación Biomédica y Biosensores*, 2025.
+[1] Universidad Militar Nueva Granada, Guía de Laboratorio: Simulación y monitoreo de variables cardiovasculares y hemodinámicas, Facultad de Ingeniería, Programa de Ingeniería Biomédica, Instrumentación Biomédica y Biosensores.
+
+[2] Pronk Technologies, OxSim OX-1: Optical SpO₂ Simulator, manual de usuario y especificaciones técnicas del simulador.
+
+[3] Mindray, uMEC Series Patient Monitor Operator’s Manual, Shenzhen Mindray Bio-Medical Electronics Co., Ltd.
+
+[4] Mindray, uMEC Series – SpO₂ Monitoring Module Specifications, documentación técnica del fabricante.
+
+[5] Mindray, uMEC Series Service Manual, procedimientos de prueba y verificación del monitor.
